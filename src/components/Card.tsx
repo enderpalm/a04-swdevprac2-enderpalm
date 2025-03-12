@@ -9,7 +9,7 @@ interface Props {
 export default function Card({ venueName, imgSrc }: Props) {
     return (
         <div className='bg-white rounded-xl shadow-md m-3 w-64 h-72'>
-            <div className={styles.cardImage}>
+            <div className='w-full rounded-t-xl overflow-hidden relative aspect-[3/2]'>
                 <Image
                     src={imgSrc}
                     alt={`${venueName} image`}
