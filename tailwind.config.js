@@ -8,6 +8,8 @@ module.exports = {
     extend: {
       fontFamily: {
         anuphan: ['Anuphan', 'sans-serif'],
+        ubuntu: ['Ubuntu', 'sans-serif'],
+        jetbrains: ['JetBrains Mono', 'monospace'],
       }
     },
   },

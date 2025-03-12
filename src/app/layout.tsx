@@ -1,3 +1,4 @@
+import TopMenu from '@/components/TopMenu';
 import './globals.css'
 
 export const metadata = {
@@ -11,7 +12,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <TopMenu />
+        {children}
+      </body>
     </html>
   );
 }
