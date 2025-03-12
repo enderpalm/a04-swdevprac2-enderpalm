@@ -1,22 +1,23 @@
 import Image from "next/image";
 import styles from "./card.module.css";
 
-export default function Card() {
-  // lock card content (no props)
-  return (
-		<div className={styles.card}>
-			<div className={styles.cardImage}>
-			<Image
-				src={"/img/cards/co-working-space.webp"}
-				alt="event image"
-				fill
-				objectFit="cover"
-			/>
-			</div>
-			<div className={styles.cardTitleHolder}>
-			<h3 className={styles.cardTitle}>■ Co-Working Space</h3>
-			<h4 className={styles.cardSubtitle}>Host unforgettable events with ease — flexible venues, expert support, and seamless planning, tailored to your vision.</h4>
-			</div>
-		</div>
-  );
+interface Props {
+    venueName: string;
+    imgSrc: string;
+}
+
+export default function Card({ venueName, imgSrc }: Props) {
+    return (
+        <div className='bg-white rounded-xl shadow-md m-3 w-64 h-72'>
+            <div className={styles.cardImage}>
+                <Image
+                    src={imgSrc}
+                    alt={`${venueName} image`}
+                    fill
+                    className="object-cover"
+                />
+            </div>
+            <h2 className='m-2 font-anuphan font-semibold'>{venueName}</h2>
+        </div>
+    );
 }
